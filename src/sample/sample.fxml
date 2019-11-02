@@ -1,0 +1,29 @@
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.*?>
+<?import sample.ResizableCanvas?>
+<AnchorPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:id="root"
+            prefWidth="400"
+            prefHeight="400">
+    <ResizableCanvas fx:id="canvas" onMouseClicked="#canvasOnMouseClicked"/>
+    <FlowPane fx:id="options" orientation="HORIZONTAL" hgap="5"
+              AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0" AnchorPane.rightAnchor="0" >
+        <RadioButton fx:id="rbSelect" text="Select" selected="true">
+            <toggleGroup>
+                <ToggleGroup fx:id="modeGroup"/>
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="rbCircle" text="Circle">
+            <toggleGroup>
+                <fx:reference source="modeGroup"/>
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="rbSquare" text="Square">
+            <toggleGroup>
+                <fx:reference source="modeGroup"/>
+            </toggleGroup>
+        </RadioButton>
+    </FlowPane>
+</AnchorPane>
