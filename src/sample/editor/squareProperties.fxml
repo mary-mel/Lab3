@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Button?>
+<FlowPane xmlns:fx="http://javafx.com/fxml"
+          xmlns="http://javafx.com/javafx"
+          fx:controller="sample.editor.SquarePropertiesController"
+          prefHeight="160.0" prefWidth="230.0"
+          orientation="VERTICAL">
+    <Label text="Length: "/>
+    <TextField fx:id="sideLengthTextField"/>
+    <ColorPicker fx:id="colorPicker" />
+    <Button text="OK" onMouseClicked="#onOkClicked"/>
+</FlowPane>

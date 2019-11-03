@@ -1,6 +1,6 @@
 package sample;
 
-public enum Shapes {
+public enum ShapeType {
     CIRCLE,
     SQUARE
 }
